@@ -1,0 +1,20 @@
+# Sensitive Information
+.env
+*.tfvars
+terraform.tfvars
+
+# Terraform Infrastructure State
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+
+# Generated Python Cache & Log Files
+__pycache__/
+*.py[cod]
+*$py.class
+logs/
+*.log
+
+# Operating System (OS) Generated Files
+.DS_Store
+Thumbs.db
