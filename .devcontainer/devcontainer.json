@@ -1,0 +1,37 @@
+{
+  "name": "Olist Data Pipeline",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17",
+      "jdkDistro": "ms"
+    },
+    "ghcr.io/devcontainers/features/aws-cli:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/terraform:1": {
+      "version": "1.14.8"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "hashicorp.terraform",
+        "ms-toolsai.jupyter",
+        "bruin-data.bruin"
+      ]
+    }
+  },
+
+  "postCreateCommand": "pip install --upgrade pip && if [ -f requirements.txt ]; then pip install -r requirements.txt; fi"
+}
