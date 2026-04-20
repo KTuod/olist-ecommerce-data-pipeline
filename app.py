@@ -371,7 +371,7 @@ page = st.sidebar.radio(
 # ----------------------------------------------------------------------
 # PAGE 1: SALES OVERVIEW
 # ----------------------------------------------------------------------
-if page == "1. Sales Overview":
+if page == "Sales Overview":
     st.header("Sales & Revenue Overview")
     
     col1, col2, col3 = st.columns(3)
@@ -436,7 +436,7 @@ if page == "1. Sales Overview":
 # ----------------------------------------------------------------------
 # PAGE 2: CUSTOMER FEEDBACK
 # ----------------------------------------------------------------------
-elif page == "2. Customer Feedback":
+elif page == "Customer Feedback":
     st.header("Customer Feedback Analysis")
     
     col1, col2 = st.columns(2)
