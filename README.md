@@ -104,7 +104,7 @@ This project addresses these challenges by building an automated and scalable **
 │   └── pipeline.yml        # Pipeline definition (Bruin)
 ├── terraform/              # Infrastructure as Code (R2 buckets)
 ├── .bruin.yml              # Bruin configuration
-├── .env                    # Environment variables (DO NOT COMMIT)
+├── .env                    # Environment variables
 ├── app.py                  # Analytics / dashboard app
 └── requirements.txt        # Dependencies
 ```
@@ -136,6 +136,9 @@ Ctrl + Shift + P → Dev Containers: Reopen in Container
 ### 3. Configure Variables
 
 #### Environment Variables
+
+Create file .env with the content:
+
 ```env
 R2_ACCOUNT_ID=...
 R2_ACCESS_KEY=...
