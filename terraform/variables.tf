@@ -13,7 +13,7 @@ variable "cloudflare_api_token" {
 variable "bucket_name" {
   description = "Name of Storing Dataset"
   type        = string
-  default     = "olist-dataset"
+  default     = "scm-car-dataset"
 }
 
 variable "alert_email" {

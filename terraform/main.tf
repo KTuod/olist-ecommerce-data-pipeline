@@ -16,7 +16,7 @@ provider "cloudflare" {
 resource "cloudflare_r2_bucket" "data_lake" {
   account_id = var.cloudflare_account_id
   name       = var.bucket_name
-  location   = "APAC" 
+  location   = "APAC"
 }
 
 # 3. Set up cost alert notification via email

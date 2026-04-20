@@ -2,8 +2,8 @@
 name: bronze/storage.upload_to_r2
 type: python
 depends:
-    - bronze/ingest.ingest_olist_kaggle
-description: "Upload raw Olist dataset from local storage to Cloudflare R2 (Bronze layer)."
+    - bronze/ingest.ingest_scm_kaggle
+description: "Upload raw scm dataset from local storage to Cloudflare R2 (Bronze layer)."
 @bruin """
 
 import os
@@ -20,15 +20,15 @@ def get_r2_client():
     """
     
     return boto3.client(
-        service_name="s3",
-        endpoint_url=f"https://{os.getenv('R2_ACCOUNT_ID')}.r2.cloudflarestorage.com",
-        aws_access_key_id=os.getenv("R2_ACCESS_KEY"),
-        aws_secret_access_key=os.getenv("R2_SECRET_KEY"),
-        region_name="auto"
+        service_name = "s3",
+        endpoint_url = f"https://{os.getenv('R2_ACCOUNT_ID')}.r2.cloudflarestorage.com",
+        aws_access_key_id = os.getenv("R2_ACCESS_KEY"),
+        aws_secret_access_key = os.getenv("R2_SECRET_KEY"),
+        region_name = "auto"
     )
 
 
-def upload_to_bronze():
+def upload_to_r2():
     """
     Upload all files from local data directory to R2 Bronze layer.
     """
@@ -38,7 +38,7 @@ def upload_to_bronze():
 
     # Define source and destination
     local_folder_path = os.getenv("RAW_DATA_PATH", "./data")
-    r2_prefix = "bronze/olist"
+    r2_prefix = "bronze/car-scm"
     base_path = Path(local_folder_path)
 
     # Recursively upload files
@@ -58,4 +58,4 @@ def upload_to_bronze():
 
 
 if __name__ == "__main__":
-    upload_to_bronze()
+    upload_to_r2()
