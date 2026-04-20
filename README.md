@@ -162,11 +162,11 @@ touch terraform.tfvars
 Then add the following content:
 
 ```hcl
-cloudflare_account_id = "your_cloudflare_account_id"
-cloudflare_api_token  = "your_cloudflare_api_token"
+cloudflare_account_id =...
+cloudflare_api_token  =...
 
 bucket_name           = "scm-car-dataset"
-alert_email           = "your_email@example.com"
+alert_email           = ...
 ```
 
 ---
