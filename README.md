@@ -198,5 +198,5 @@ bruin run pipelines/pipeline.yml
 ```bash
 streamlit run app.py
 ```
-
+![Dashboard](documents/Streamlit Dashboard.png)
 ---
